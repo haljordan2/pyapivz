@@ -19,7 +19,7 @@ def ciscoios():
         return render_template('baseIOS.conf.j2', **qparms)
 
     except Exception as err:
-        return "uh-oh! " + err
+        return "uh-oh! " + str(err)
 
 if __name__ == "__main__":
     app.run(port=5006)
