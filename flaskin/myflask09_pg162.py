@@ -3,7 +3,7 @@
 from flask import Flask, render_template, request
 import sqlite3 as sql
 
-app = Flask(__name_)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -58,7 +58,7 @@ if __name__ == '__main__':
         exit()
 
     try:
-        con.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT')
+        con.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT)')
         print ("Table created successfully")
     except:
         pass
